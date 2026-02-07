@@ -1,0 +1,43 @@
+---
+title: Text Menu
+description: Classic numbered text menu overlay.
+---
+
+# Text Menu
+
+The old-school CS 1.6 text menu — the numbered list overlay used for team selection, buy menus (before VGUI), and radio commands. Amber text on semi-transparent black background.
+
+<ComponentPreview name="text-menu" />
+
+## Usage
+
+```tsx
+import { TextMenu } from "@/components/ui/cscn/text-menu";
+
+<TextMenu
+  title="Select Team"
+  items={[
+    { key: "1", label: "Counter-Terrorists" },
+    { key: "2", label: "Terrorists" },
+    { key: "3", label: "Auto-Select" },
+    { key: "5", label: "Spectator" },
+  ]}
+  onSelect={(item) => console.log("Selected:", item.label)}
+/>
+```
+
+## Radio Commands Example
+
+```tsx
+<TextMenu
+  title="Radio Commands"
+  items={[
+    { key: "1", label: "Cover me!" },
+    { key: "2", label: "You take the point" },
+    { key: "3", label: "Hold this position" },
+    { key: "4", label: "Regroup team" },
+    { key: "5", label: "Follow me" },
+    { key: "6", label: "Taking fire, need assistance" },
+  ]}
+/>
+```

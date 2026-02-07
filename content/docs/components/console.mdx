@@ -1,0 +1,38 @@
+---
+title: Console
+description: Interactive developer console with command input.
+---
+
+# Console
+
+The CS 1.6 developer console (opened with `~`) — scrollable output area with colored message types and a command input line with the classic `]` prompt.
+
+<ComponentPreview name="console" />
+
+## Usage
+
+```tsx
+import { Console } from "@/components/ui/cscn/console";
+
+<Console
+  lines={[
+    { text: "Console initialized.", type: "system" },
+    { text: "Server using 'Counter-Strike' game rules", type: "info" },
+    { text: "sv_cheats 1", type: "input" },
+    { text: "sv_cheats = 1", type: "system" },
+    { text: "Unknown command: noclip", type: "error" },
+    { text: "SV_SpawnServer: de_dust2", type: "warning" },
+  ]}
+  onCommand={(cmd) => console.log("Command:", cmd)}
+/>
+```
+
+## Message Types
+
+| Type | Color | Usage |
+|------|-------|-------|
+| `info` | White | General information |
+| `system` | Gold | System/engine messages |
+| `input` | Amber | User-entered commands (prefixed with `]`) |
+| `warning` | Orange | Warnings |
+| `error` | Red | Errors |

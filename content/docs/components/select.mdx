@@ -1,0 +1,99 @@
+---
+title: Select
+description: Custom dropdown select with VGUI styling. Built on Radix UI for full keyboard accessibility.
+---
+
+# Select
+
+A custom dropdown select component that replaces the native `<select>` with a fully styled CS 1.6 VGUI dropdown. Built on Radix UI Select for accessibility, keyboard navigation, and portal-based rendering.
+
+<ComponentPreview name="select" />
+
+## Usage
+
+```tsx
+import {
+  Select,
+  SelectTrigger,
+  SelectValue,
+  SelectContent,
+  SelectItem,
+} from "@/components/ui/cscn/select";
+
+<Select defaultValue="dust2">
+  <SelectTrigger className="w-48">
+    <SelectValue placeholder="Select map..." />
+  </SelectTrigger>
+  <SelectContent>
+    <SelectItem value="dust2">de_dust2</SelectItem>
+    <SelectItem value="inferno">de_inferno</SelectItem>
+    <SelectItem value="nuke">de_nuke</SelectItem>
+    <SelectItem value="mirage">de_mirage</SelectItem>
+  </SelectContent>
+</Select>
+```
+
+## With Groups
+
+```tsx
+import {
+  Select,
+  SelectTrigger,
+  SelectValue,
+  SelectContent,
+  SelectGroup,
+  SelectLabel,
+  SelectItem,
+  SelectSeparator,
+} from "@/components/ui/cscn/select";
+
+<Select>
+  <SelectTrigger className="w-56">
+    <SelectValue placeholder="Choose weapon..." />
+  </SelectTrigger>
+  <SelectContent>
+    <SelectGroup>
+      <SelectLabel>Rifles</SelectLabel>
+      <SelectItem value="ak47">AK-47 — $2500</SelectItem>
+      <SelectItem value="m4a1">M4A1 — $3100</SelectItem>
+    </SelectGroup>
+    <SelectSeparator />
+    <SelectGroup>
+      <SelectLabel>Pistols</SelectLabel>
+      <SelectItem value="deagle">Desert Eagle — $650</SelectItem>
+      <SelectItem value="usp">USP — $500</SelectItem>
+    </SelectGroup>
+  </SelectContent>
+</Select>
+```
+
+## Sub-components
+
+| Component | Description |
+|-----------|-------------|
+| `Select` | Root component (Radix) — controls open state and value |
+| `SelectTrigger` | The button that opens the dropdown |
+| `SelectValue` | Displays the selected value inside the trigger |
+| `SelectContent` | Portal-based dropdown panel |
+| `SelectItem` | Individual option with checkmark indicator |
+| `SelectGroup` | Groups related items together |
+| `SelectLabel` | Non-interactive label for a group |
+| `SelectSeparator` | Visual divider between groups |
+
+## Keyboard Navigation
+
+| Key | Action |
+|-----|--------|
+| `Space` / `Enter` | Open dropdown, select focused item |
+| `Arrow Down` / `Arrow Up` | Navigate between items |
+| `Escape` | Close dropdown |
+| Type characters | Jump to matching item |
+
+## Design Notes
+
+- Trigger uses inset bevel borders matching the Input component
+- Dropdown panel uses raised bevel borders (like Card/Dialog)
+- Items highlight with `--cs-bg-selection` background and `--cs-text-bright` text
+- Selected item shows a checkmark indicator
+- Portal-based rendering ensures the dropdown isn't clipped by overflow containers
+- No border-radius anywhere — sharp edges match the original VGUI style

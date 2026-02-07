@@ -1,0 +1,43 @@
+---
+title: Radar
+description: Circular minimap radar with player position dots.
+---
+
+# Radar
+
+The CS 1.6 radar minimap — a circular display showing player positions as colored dots. Self is shown as a white cross, teammates as team-colored dots, enemies as red dots.
+
+<ComponentPreview name="radar" />
+
+## Usage
+
+```tsx
+import { Radar } from "@/components/ui/cscn/radar";
+
+<Radar
+  size={160}
+  mapName="de_dust2"
+  dots={[
+    { x: 0, y: 0, team: "self" },
+    { x: 0.3, y: -0.4, team: "ct" },
+    { x: -0.5, y: 0.2, team: "ct" },
+    { x: 0.6, y: 0.5, team: "t" },
+  ]}
+/>
+```
+
+## Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `dots` | `RadarDot[]` | `[]` | Player positions |
+| `size` | `number` | `160` | Diameter in pixels |
+| `mapName` | `string` | — | Map name label |
+
+### RadarDot
+
+| Prop | Type | Description |
+|------|------|-------------|
+| `x` | `number` | X position (-1 to 1, relative to center) |
+| `y` | `number` | Y position (-1 to 1) |
+| `team` | `"ct" \| "t" \| "self"` | Team affiliation |

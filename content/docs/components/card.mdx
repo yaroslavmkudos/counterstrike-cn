@@ -1,0 +1,51 @@
+---
+title: Card
+description: VGUI panel container with header, content, and footer sections.
+---
+
+# Card
+
+A compound component recreating CS 1.6's VGUI window/panel style. Used as the base container for dialogs, menus, and information panels throughout the game.
+
+<ComponentPreview name="card" />
+
+## Usage
+
+```tsx
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+  CardContent,
+  CardFooter,
+} from "@/components/ui/cscn/card";
+
+<Card className="w-80">
+  <CardHeader>
+    <CardTitle>Server Info</CardTitle>
+  </CardHeader>
+  <CardContent>
+    <p className="cs-font-ui text-xs text-[var(--cs-text)]">
+      Map: de_dust2
+    </p>
+    <p className="cs-font-ui text-xs text-[var(--cs-text-secondary)]">
+      Players: 16/32
+    </p>
+  </CardContent>
+  <CardFooter>
+    <CardDescription>Ping: 42ms</CardDescription>
+  </CardFooter>
+</Card>
+```
+
+## Sub-components
+
+| Component | Description |
+|-----------|-------------|
+| `Card` | Outer container with olive background and raised bevel |
+| `CardHeader` | Dark header bar with bottom border |
+| `CardTitle` | Yellow title text with text shadow |
+| `CardDescription` | Secondary gray text |
+| `CardContent` | Padded content area |
+| `CardFooter` | Dark footer bar with top border |

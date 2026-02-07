@@ -1,0 +1,25 @@
+{
+  "title": "Components",
+  "pages": [
+    "index",
+    "button",
+    "input",
+    "select",
+    "card",
+    "dialog",
+    "badge",
+    "progress-bar",
+    "hud",
+    "scoreboard",
+    "buy-menu",
+    "kill-feed",
+    "radar",
+    "chat",
+    "console",
+    "server-browser",
+    "text-menu",
+    "team-select",
+    "loading-screen",
+    "motd"
+  ]
+}

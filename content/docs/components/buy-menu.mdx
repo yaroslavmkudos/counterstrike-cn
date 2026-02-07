@@ -1,0 +1,50 @@
+---
+title: Buy Menu
+description: Full buy menu with weapon categories, pricing, and team filtering.
+---
+
+# Buy Menu
+
+The CS 1.6 buy menu — category sidebar on the left, items on the right, with proper pricing and team-based weapon availability. Includes all original weapon categories and default items.
+
+<ComponentPreview name="buy-menu" />
+
+## Usage
+
+```tsx
+import { BuyMenu } from "@/components/ui/cscn/buy-menu";
+
+<BuyMenu
+  money={4750}
+  team="ct"
+  onBuy={(item) => console.log(`Bought ${item.name} for $${item.price}`)}
+/>
+```
+
+### With custom categories
+
+```tsx
+import { BuyMenu, type BuyMenuCategory } from "@/components/ui/cscn/buy-menu";
+
+const customCategories: BuyMenuCategory[] = [
+  {
+    key: "1",
+    label: "Primary",
+    items: [
+      { key: "1", name: "AK-47", price: 2500, team: "both" },
+      { key: "2", name: "M4A1", price: 3100, team: "both" },
+    ],
+  },
+];
+
+<BuyMenu categories={customCategories} money={16000} team="ct" />
+```
+
+## Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `categories` | `BuyMenuCategory[]` | All CS 1.6 weapons | Weapon categories |
+| `money` | `number` | `800` | Player's current money |
+| `team` | `"ct" \| "t"` | `"ct"` | Current team (filters weapons) |
+| `onBuy` | `(item: BuyMenuItem) => void` | — | Callback when item is purchased |

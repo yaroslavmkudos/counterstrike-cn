@@ -1,0 +1,26 @@
+---
+title: Team Select
+description: CT/T/Spectator team selection panel.
+---
+
+# Team Select
+
+The team selection screen — pick Counter-Terrorists, Terrorists, or Spectator. Each option shows team icon, name, and keyboard shortcut.
+
+<ComponentPreview name="team-select" />
+
+## Usage
+
+```tsx
+import { TeamSelect } from "@/components/ui/cscn/team-select";
+
+<TeamSelect
+  onSelect={(team) => console.log("Selected team:", team)}
+/>
+```
+
+## Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `onSelect` | `(team: "ct" \| "t" \| "spectator") => void` | — | Selection callback |

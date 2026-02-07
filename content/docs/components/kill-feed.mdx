@@ -1,0 +1,45 @@
+---
+title: Kill Feed
+description: Top-right kill notification feed with team colors and weapons.
+---
+
+# Kill Feed
+
+The kill notification feed from the top-right corner of the screen — color-coded player names by team, weapon indicators, headshot markers, and progressive opacity fade.
+
+<ComponentPreview name="kill-feed" />
+
+## Usage
+
+```tsx
+import { KillFeed } from "@/components/ui/cscn/kill-feed";
+
+<KillFeed
+  entries={[
+    {
+      killer: "s1mple",
+      killerTeam: "ct",
+      victim: "dev1ce",
+      victimTeam: "t",
+      weapon: "awp",
+      headshot: true,
+    },
+    {
+      killer: "GeT_RiGhT",
+      killerTeam: "t",
+      victim: "Hiko",
+      victimTeam: "ct",
+      weapon: "ak47",
+    },
+  ]}
+/>
+```
+
+## Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `entries` | `KillFeedEntry[]` | — | Kill events to display |
+| `maxVisible` | `number` | `5` | Maximum entries shown |
+
+Supports 30+ weapon names including: `ak47`, `m4a1`, `awp`, `deagle`, `usp`, `glock`, `knife`, `hegrenade`, `mp5`, `p90`, `scout`, and more.

@@ -1,0 +1,44 @@
+---
+title: Server Browser
+description: Sortable server list with tabs, ping coloring, and connection UI.
+---
+
+# Server Browser
+
+The full CS 1.6 server browser — tabbed interface (Internet, Favorites, History, Spectate, LAN), sortable columns, ping color-coding, lock/VAC indicators, and connect actions.
+
+<ComponentPreview name="server-browser" />
+
+## Usage
+
+```tsx
+import { ServerBrowser } from "@/components/ui/cscn/server-browser";
+
+<ServerBrowser
+  servers={[
+    { name: "dust2 24/7 | Competitive", map: "de_dust2", players: 28, maxPlayers: 32, ping: 32, vac: true },
+    { name: "[RU] Public AWP Only", map: "awp_india", players: 16, maxPlayers: 16, ping: 78, locked: true },
+    { name: "Surf Server | Timer", map: "surf_greatriver", players: 8, maxPlayers: 24, ping: 145, vac: true },
+    { name: "GunGame #1337", map: "gg_simpsons", players: 22, maxPlayers: 32, ping: 55 },
+  ]}
+  onConnect={(server) => console.log("Connecting to:", server.name)}
+  onRefresh={() => console.log("Refreshing...")}
+/>
+```
+
+## Features
+
+- Sortable columns (click headers to sort)
+- Ping color coding: green (under 50), amber (under 100), red (100+)
+- Lock icon for password-protected servers
+- VAC checkmark for Valve Anti-Cheat secured servers
+- Double-click to connect
+- Tab navigation
+
+## Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `servers` | `Server[]` | — | Server list |
+| `onConnect` | `(server: Server) => void` | — | Connect callback |
+| `onRefresh` | `() => void` | — | Refresh callback |

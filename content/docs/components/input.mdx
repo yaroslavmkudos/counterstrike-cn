@@ -1,0 +1,34 @@
+---
+title: Input
+description: VGUI-style text input with inset beveled borders.
+---
+
+# Input
+
+Text input styled after CS 1.6's VGUI form fields — dark background with inset 3D beveled borders.
+
+<ComponentPreview name="input" />
+
+## Usage
+
+```tsx
+import { Input } from "@/components/ui/cscn/input";
+
+<Input placeholder="Enter server IP..." />
+
+<Input type="password" placeholder="Password" />
+
+<Input disabled placeholder="Disabled" />
+```
+
+## Props
+
+Standard HTML `<input>` props — the component forwards all native attributes.
+
+## Design Notes
+
+- Background: `#1A1A1A` (dark control background from VGUI)
+- Border: Inset bevel (dark on top/left, light on bottom/right) — opposite of buttons
+- Focus state: Border turns gold accent (`#C4B550`)
+- Text color: Off-white `#DEDFD6`
+- Placeholder: Dim green-gray `#75806F`

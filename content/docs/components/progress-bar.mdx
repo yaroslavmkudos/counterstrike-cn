@@ -1,0 +1,40 @@
+---
+title: Progress Bar
+description: Loading and download progress indicators.
+---
+
+# Progress Bar
+
+Progress indicator styled after CS 1.6's loading screen progress bar — with the inset border track, animated striped fill, and optional percentage display.
+
+<ComponentPreview name="progress-bar" />
+
+## Variants
+
+- **default** — Gold fill, standard behavior
+- **loading** — Gold fill with animated diagonal stripes
+- **download** — Green fill (like download progress)
+
+## Usage
+
+```tsx
+import { ProgressBar } from "@/components/ui/cscn/progress-bar";
+
+<ProgressBar value={65} label="Loading de_dust2..." />
+
+<ProgressBar value={42} variant="loading" label="Receiving game data..." />
+
+<ProgressBar value={87} variant="download" label="Downloading map..." />
+
+<ProgressBar value={100} showPercentage={false} />
+```
+
+## Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `value` | `number` | — | Current progress value |
+| `max` | `number` | `100` | Maximum value |
+| `label` | `string` | — | Label text above the bar |
+| `showPercentage` | `boolean` | `true` | Show percentage number |
+| `variant` | `"default" \| "loading" \| "download"` | `"default"` | Visual style |

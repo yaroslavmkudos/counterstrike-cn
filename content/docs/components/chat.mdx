@@ -1,0 +1,32 @@
+---
+title: Chat
+description: In-game chat display with team colors and dead/team indicators.
+---
+
+# Chat
+
+The CS 1.6 in-game chat — team-colored player names, dead player indicators, and team chat markers.
+
+<ComponentPreview name="chat" />
+
+## Usage
+
+```tsx
+import { Chat } from "@/components/ui/cscn/chat";
+
+<Chat
+  messages={[
+    { sender: "n0thing", team: "ct", message: "rush B" },
+    { sender: "f0rest", team: "t", message: "lol", isDead: true },
+    { sender: "shroud", team: "ct", message: "nice shot", isTeamChat: true },
+    { sender: "GeT_RiGhT", team: "t", message: "gg wp" },
+  ]}
+/>
+```
+
+## Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `messages` | `ChatMessage[]` | — | Chat messages |
+| `maxVisible` | `number` | `8` | Max messages shown |

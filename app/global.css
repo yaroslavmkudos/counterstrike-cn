@@ -1,0 +1,156 @@
+@import "tailwindcss";
+@import "fumadocs-ui/css/neutral.css";
+@import "fumadocs-ui/css/preset.css";
+
+/* ===== CS 1.6 Theme Override for Fumadocs ===== */
+
+/* Override the @theme defaults — these need to be in @theme to register as Tailwind colors */
+@theme {
+  --color-fd-background: #111411;
+  --color-fd-foreground: #dedfd6;
+  --color-fd-muted: #282e22;
+  --color-fd-muted-foreground: #a0aa95;
+  --color-fd-popover: #333433;
+  --color-fd-popover-foreground: #dedfd6;
+  --color-fd-card: #2a2f25;
+  --color-fd-card-foreground: #dedfd6;
+  --color-fd-border: #3e4637;
+  --color-fd-primary: #ffcc00;
+  --color-fd-primary-foreground: #111411;
+  --color-fd-secondary: #3e4637;
+  --color-fd-secondary-foreground: #dedfd6;
+  --color-fd-accent: #4a5942;
+  --color-fd-accent-foreground: #dedfd6;
+  --color-fd-ring: #c4b550;
+  --color-fd-overlay: rgba(0, 0, 0, 0.6);
+}
+
+/* Override .dark selector (fumadocs neutral.css uses this) */
+.dark {
+  --color-fd-background: #111411;
+  --color-fd-foreground: #dedfd6;
+  --color-fd-muted: #282e22;
+  --color-fd-muted-foreground: #a0aa95;
+  --color-fd-popover: #333433;
+  --color-fd-popover-foreground: #dedfd6;
+  --color-fd-card: #2a2f25;
+  --color-fd-card-foreground: #dedfd6;
+  --color-fd-border: #3e4637;
+  --color-fd-primary: #ffcc00;
+  --color-fd-primary-foreground: #111411;
+  --color-fd-secondary: #3e4637;
+  --color-fd-secondary-foreground: #dedfd6;
+  --color-fd-accent: #4a5942;
+  --color-fd-accent-foreground: #dedfd6;
+  --color-fd-ring: #c4b550;
+  --color-fd-overlay: rgba(0, 0, 0, 0.6);
+}
+
+/* Also override light mode to be dark (we only support dark) */
+:root {
+  --color-fd-background: #111411;
+  --color-fd-foreground: #dedfd6;
+  --color-fd-muted: #282e22;
+  --color-fd-muted-foreground: #a0aa95;
+  --color-fd-popover: #333433;
+  --color-fd-popover-foreground: #dedfd6;
+  --color-fd-card: #2a2f25;
+  --color-fd-card-foreground: #dedfd6;
+  --color-fd-border: #3e4637;
+  --color-fd-primary: #ffcc00;
+  --color-fd-primary-foreground: #111411;
+  --color-fd-secondary: #3e4637;
+  --color-fd-secondary-foreground: #dedfd6;
+  --color-fd-accent: #4a5942;
+  --color-fd-accent-foreground: #dedfd6;
+  --color-fd-ring: #c4b550;
+  --color-fd-overlay: rgba(0, 0, 0, 0.6);
+
+  --background: #111411;
+  --foreground: #dedfd6;
+  --card: #2a2f25;
+  --card-foreground: #dedfd6;
+  --popover: #333433;
+  --popover-foreground: #dedfd6;
+  --primary: #ffcc00;
+  --primary-foreground: #111411;
+  --secondary: #3e4637;
+  --secondary-foreground: #dedfd6;
+  --muted: #282e22;
+  --muted-foreground: #a0aa95;
+  --accent: #4a5942;
+  --accent-foreground: #dedfd6;
+  --destructive: #ff4040;
+  --destructive-foreground: #ffffff;
+  --border: #3e4637;
+  --input: #1a1a1a;
+  --ring: #c4b550;
+  --radius: 0px;
+}
+
+/* Sidebar override */
+.dark #nd-sidebar,
+#nd-sidebar {
+  --color-fd-muted: #282e22;
+  --color-fd-secondary: #333a2c;
+  --color-fd-muted-foreground: #a0aa95;
+}
+
+@layer base {
+  * {
+    @apply border-[#3e4637];
+  }
+  body {
+    background-color: #111411;
+    color: #dedfd6;
+    font-family: "Verdana", "DejaVu Sans", system-ui, sans-serif;
+  }
+}
+
+/* Force dark backgrounds on fumadocs elements */
+[data-rehype-pretty-code-fragment] {
+  background-color: #1a1a1a !important;
+}
+
+pre {
+  background-color: #1a1a1a !important;
+  border-color: #3e4637 !important;
+}
+
+code {
+  color: #c4b550 !important;
+}
+
+pre code {
+  color: #dedfd6 !important;
+}
+
+/* Table styling override */
+table {
+  border-color: #3e4637;
+}
+
+th {
+  background-color: #333a2c !important;
+  color: #ffcc00 !important;
+  border-color: #3e4637 !important;
+}
+
+td {
+  background-color: #1e2319 !important;
+  color: #dedfd6 !important;
+  border-color: #3e4637 !important;
+}
+
+tr:nth-child(even) td {
+  background-color: #232820 !important;
+}
+
+/* Link styling */
+a:not([class]) {
+  color: #ffcc00;
+}
+
+a:not([class]):hover {
+  color: #ffffff;
+}

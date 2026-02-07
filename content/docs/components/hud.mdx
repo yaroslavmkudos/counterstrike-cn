@@ -1,0 +1,74 @@
+---
+title: HUD
+description: Health, Armor, Ammo, Money, and Timer displays with amber glow.
+---
+
+# HUD
+
+The iconic CS 1.6 Heads-Up Display elements — the amber-glowing numbers that every player knows by heart. Color constants come directly from the GoldSrc engine source (`hud.h`):
+
+```c
+#define RGB_YELLOWISH 0x00FFA000  // Primary HUD color
+#define RGB_REDISH    0x00FF1010  // Damage/low health
+#define RGB_GREENISH  0x0000A000  // Money display
+```
+
+<ComponentPreview name="hud" />
+
+## Individual Components
+
+### Health
+```tsx
+import { Health } from "@/components/ui/cscn/hud";
+
+<Health value={87} />       // Normal (amber glow)
+<Health value={15} />       // Low health (red glow, auto-detected at ≤25)
+```
+
+### Armor
+```tsx
+import { Armor } from "@/components/ui/cscn/hud";
+
+<Armor value={100} />               // Kevlar vest
+<Armor value={100} hasHelmet />      // Kevlar + Helmet
+```
+
+### Ammo
+```tsx
+import { Ammo } from "@/components/ui/cscn/hud";
+
+<Ammo current={21} reserve={90} />
+<Ammo current={3} reserve={90} weapon="AK-47" />  // Low ammo = red
+```
+
+### Money
+```tsx
+import { Money } from "@/components/ui/cscn/hud";
+
+<Money amount={4750} />     // Green glow, formatted with comma
+```
+
+### Timer
+```tsx
+import { Timer } from "@/components/ui/cscn/hud";
+
+<Timer time="1:45" />              // Normal (amber)
+<Timer time="0:10" isLow />       // Low time (red glow)
+```
+
+## Full HUD Layout
+
+```tsx
+import { Hud } from "@/components/ui/cscn/hud";
+
+<Hud
+  health={87}
+  armor={100}
+  hasHelmet
+  ammoCurrent={21}
+  ammoReserve={90}
+  weapon="M4A1"
+  money={4750}
+  time="1:45"
+/>
+```

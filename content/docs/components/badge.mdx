@@ -1,0 +1,30 @@
+---
+title: Badge
+description: Team and status badges with CS 1.6 styling.
+---
+
+# Badge
+
+Small label components for displaying team affiliation, status, or categories. Uses the CS 1.6 team color system.
+
+<ComponentPreview name="badge" />
+
+## Variants
+
+- **default** — Olive-green background with standard text
+- **ct** — Blue-tinted Counter-Terrorist badge
+- **t** — Red-tinted Terrorist badge
+- **accent** — Gold accent badge
+- **vac** — Green VAC-secured badge
+
+## Usage
+
+```tsx
+import { Badge } from "@/components/ui/cscn/badge";
+
+<Badge variant="ct">Counter-Terrorist</Badge>
+<Badge variant="t">Terrorist</Badge>
+<Badge variant="vac">VAC Secured</Badge>
+<Badge variant="accent">Active</Badge>
+<Badge>Default</Badge>
+```

@@ -1,0 +1,40 @@
+---
+title: MOTD
+description: Message of the Day server panel.
+---
+
+# MOTD
+
+The "Message of the Day" panel shown after connecting to a server — displays server rules, welcome messages, or custom content in a scrollable panel.
+
+<ComponentPreview name="motd" />
+
+## Usage
+
+```tsx
+import { Motd } from "@/components/ui/cscn/motd";
+
+<Motd
+  serverName="dust2 24/7 | Competitive"
+  content={`Welcome to dust2 24/7!
+
+Server Rules:
+- No cheating (VAC + admin monitored)
+- No team killing
+- No spawn camping
+- English only in voice chat
+- Have fun!
+
+Server powered by HLDS
+Visit our website: example.com`}
+  onClose={() => console.log("MOTD closed")}
+/>
+```
+
+## Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `serverName` | `string` | `"Counter-Strike Server"` | Server name in title bar |
+| `content` | `string` | — | MOTD text content |
+| `onClose` | `() => void` | — | OK button callback |

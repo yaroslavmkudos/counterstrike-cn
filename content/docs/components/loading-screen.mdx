@@ -1,0 +1,32 @@
+---
+title: Loading Screen
+description: Map loading screen with progress bar and status text.
+---
+
+# Loading Screen
+
+The CS 1.6 map loading screen — centered logo, server and map info, animated progress bar, and status messages. Includes the authentic build number and protocol version.
+
+<ComponentPreview name="loading-screen" />
+
+## Usage
+
+```tsx
+import { LoadingScreen } from "@/components/ui/cscn/loading-screen";
+
+<LoadingScreen
+  mapName="de_dust2"
+  serverName="dust2 24/7 | Competitive"
+  progress={65}
+  statusText="Receiving game data..."
+/>
+```
+
+## Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `mapName` | `string` | `"de_dust2"` | Map being loaded |
+| `serverName` | `string` | `"Counter-Strike Server"` | Server hostname |
+| `progress` | `number` | `0` | Loading progress (0-100) |
+| `statusText` | `string` | `"Connecting..."` | Current status message |

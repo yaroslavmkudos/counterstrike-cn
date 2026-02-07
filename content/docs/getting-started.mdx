@@ -1,0 +1,95 @@
+---
+title: Getting Started
+description: Install and use Counter-Strike 1.6 UI components in your React project.
+---
+
+# Getting Started
+
+Add CS 1.6 styled components to your React project. No npm package — components are copied directly into your codebase.
+
+## Prerequisites
+
+- **React 19+**
+- **Tailwind CSS v4**
+- **TypeScript**
+
+## Install via CLI (recommended)
+
+counterstrike-cn uses the [shadcn remote registry](https://ui.shadcn.com/docs/registry) protocol. If you have a shadcn-compatible project, install any component with one command:
+
+```bash
+npx shadcn@latest add "https://counterstrike-cn.com" button
+```
+
+Replace `button` with any component name. Install multiple at once:
+
+```bash
+npx shadcn@latest add "https://counterstrike-cn.com" button input card dialog badge
+```
+
+The CLI will:
+1. Fetch the component source from the registry
+2. Copy the `.tsx` file into your project's components directory
+3. Include `cstrike.css` (the shared stylesheet for all components)
+
+## Manual Install
+
+If you're not using shadcn's CLI, you can copy components manually:
+
+### 1. Copy the CSS
+
+Every component requires the shared stylesheet. Copy `components/ui/cscn/styles/cstrike.css` into your project and import it in your root layout:
+
+```tsx
+import "@/components/ui/cscn/styles/cstrike.css";
+```
+
+### 2. Copy the component
+
+Copy the component `.tsx` file from `components/ui/cscn/` into your project. For example, for the Button:
+
+```
+components/ui/cscn/button.tsx → your-project/components/ui/cscn/button.tsx
+```
+
+### 3. Install dependencies
+
+All components use these base dependencies:
+
+```bash
+npm install clsx tailwind-merge class-variance-authority
+```
+
+Some components need additional Radix UI primitives:
+
+| Component | Extra dependency |
+|-----------|-----------------|
+| Dialog | `@radix-ui/react-dialog` |
+| Select | `@radix-ui/react-select` |
+| Tabs | `@radix-ui/react-tabs` |
+| Tooltip | `@radix-ui/react-tooltip` |
+| Separator | `@radix-ui/react-separator` |
+| Button (Slot) | `@radix-ui/react-slot` |
+
+### 4. Install the font (optional)
+
+For the authentic CS 1.6 look, download the [Counter-Strike font by SoJa](https://www.dafont.com/counter-strike.font) and add it to your project. The CSS references it as `"Counter-Strike"` font family.
+
+## Your first component
+
+```tsx
+import { Button } from "@/components/ui/cscn/button";
+
+export default function Page() {
+  return (
+    <div className="p-8" style={{ background: "#4A5942" }}>
+      <Button variant="primary">Connect</Button>
+      <Button variant="secondary">Cancel</Button>
+    </div>
+  );
+}
+```
+
+## Browse all components
+
+See the full library with live previews in the [Components](/docs/components) section.

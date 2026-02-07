@@ -1,0 +1,67 @@
+---
+title: Button
+description: VGUI-style buttons with 3D beveled borders, multiple variants, and sizes.
+---
+
+# Button
+
+The CS 1.6 Button component recreates the iconic VGUI button style with raised 3D beveled borders that invert on press, warm text colors, and instant state changes (no transitions — just like the real game).
+
+<ComponentPreview name="button" />
+
+## Variants
+
+- **default** — Standard olive-green VGUI button with beveled borders
+- **menu** — Transparent text-only button matching the main menu style (golden yellow, white on hover)
+- **buy** — Darker panel button used in the buy menu
+- **hud** — Transparent amber glow button for HUD overlays
+- **destructive** — Red-tinted button for dangerous actions
+
+## Sizes
+
+- **sm** — 28px height, small text
+- **default** — 36px height, standard text
+- **lg** — 44px height, larger text
+- **icon** — 36x36px square for icon-only buttons
+
+## Usage
+
+```tsx
+import { Button } from "@/components/ui/cscn/button";
+
+// Default VGUI button
+<Button>Connect</Button>
+
+// Menu style (like main menu items)
+<Button variant="menu">Find Servers</Button>
+
+// Buy menu button
+<Button variant="buy">AK-47 — $2500</Button>
+
+// HUD glow button
+<Button variant="hud">Buy</Button>
+
+// Sizes
+<Button size="sm">Small</Button>
+<Button size="lg">Large</Button>
+
+// As link
+<Button asChild>
+  <a href="/servers">Browse Servers</a>
+</Button>
+```
+
+## Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `variant` | `"default" \| "menu" \| "buy" \| "hud" \| "destructive"` | `"default"` | Visual style |
+| `size` | `"default" \| "sm" \| "lg" \| "icon"` | `"default"` | Size preset |
+| `asChild` | `boolean` | `false` | Render as child element (uses Radix Slot) |
+
+## Design Notes
+
+- Borders use the 3D bevel system: light (`#8C9284`) on top/left, dark (`#292C21`) on bottom/right
+- Active state reverses the bevel (inset effect)
+- No CSS transitions — state changes are instant, matching the original game feel
+- Text uses the Verdana-based `cs-font-ui` class with `text-shadow` for readability
