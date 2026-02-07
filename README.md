@@ -15,11 +15,21 @@ Counter-Strike 1.6 inspired UI components for React. Copy, paste, customize.
 
 ---
 
+## Requirements
+
+This works with any project that uses **shadcn/ui**. You don't install a package — components are copied into your codebase via the shadcn CLI.
+
+**You need:**
+- An existing React project with [shadcn/ui initialized](https://ui.shadcn.com/docs/installation) (`npx shadcn@latest init`)
+- React 19+ / TypeScript / Tailwind CSS v4
+
+**Supported frameworks:** Next.js, Vite, Remix, Astro, React Router, Laravel, TanStack — anything shadcn supports.
+
+---
+
 ## Quick Start
 
-### CLI (recommended)
-
-**1. Add the registry** (one-time setup in your `components.json`):
+**1. Add the registry** (one-time — add to your `components.json`):
 
 ```json
 {
@@ -33,17 +43,24 @@ Counter-Strike 1.6 inspired UI components for React. Copy, paste, customize.
 
 ```bash
 npx shadcn@latest add @cscn/button
+```
+
+That's it. The CLI fetches the source and copies it into your project. No npm package.
+
+Install multiple at once:
+
+```bash
 npx shadcn@latest add @cscn/button @cscn/card @cscn/dialog @cscn/hud
 ```
 
-No npm package needed — the CLI fetches the component source and copies it into your project.
+### Manual install
 
-### Manual
+If you're not using shadcn's CLI:
 
-1. Copy the component file from `components/ui/cscn/`
-2. Copy `components/ui/cscn/styles/cstrike.css`
-3. Import the CSS in your layout
-4. Install peer dependencies as needed (`clsx`, `tailwind-merge`, `class-variance-authority`)
+1. Copy the component `.tsx` from [`components/ui/cscn/`](https://github.com/yaroslavmkudos/counterstrike-cn/tree/main/components/ui/cscn)
+2. Copy [`cstrike.css`](https://github.com/yaroslavmkudos/counterstrike-cn/blob/main/components/ui/cscn/styles/cstrike.css) and import it in your layout
+3. Install peer deps: `npm install clsx tailwind-merge class-variance-authority`
+4. Some components need Radix primitives (dialog, select, tabs, tooltip, separator)
 
 ---
 
