@@ -1,0 +1,302 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "counterstrike-cn",
+  "homepage": "https://counterstrike-cn.com",
+  "items": [
+    {
+      "name": "button",
+      "type": "registry:ui",
+      "title": "CS 1.6 Button",
+      "description": "VGUI-style buttons with 3D beveled borders",
+      "files": [
+        { "path": "components/ui/cscn/button.tsx", "type": "registry:ui" },
+        { "path": "components/ui/cscn/styles/cstrike.css", "type": "registry:ui" }
+      ]
+    },
+    {
+      "name": "input",
+      "type": "registry:ui",
+      "title": "CS 1.6 Input",
+      "description": "VGUI-style text input with inset beveled borders",
+      "files": [
+        { "path": "components/ui/cscn/input.tsx", "type": "registry:ui" },
+        { "path": "components/ui/cscn/styles/cstrike.css", "type": "registry:ui" }
+      ]
+    },
+    {
+      "name": "textarea",
+      "type": "registry:ui",
+      "title": "CS 1.6 Textarea",
+      "description": "Multi-line text input with VGUI styling",
+      "files": [
+        { "path": "components/ui/cscn/textarea.tsx", "type": "registry:ui" },
+        { "path": "components/ui/cscn/styles/cstrike.css", "type": "registry:ui" }
+      ]
+    },
+    {
+      "name": "checkbox",
+      "type": "registry:ui",
+      "title": "CS 1.6 Checkbox",
+      "description": "Checkbox input with optional label",
+      "files": [
+        { "path": "components/ui/cscn/checkbox.tsx", "type": "registry:ui" },
+        { "path": "components/ui/cscn/styles/cstrike.css", "type": "registry:ui" }
+      ]
+    },
+    {
+      "name": "toggle",
+      "type": "registry:ui",
+      "title": "CS 1.6 Toggle",
+      "description": "Toggle switch with optional label",
+      "files": [
+        { "path": "components/ui/cscn/toggle.tsx", "type": "registry:ui" },
+        { "path": "components/ui/cscn/styles/cstrike.css", "type": "registry:ui" }
+      ]
+    },
+    {
+      "name": "select",
+      "type": "registry:ui",
+      "title": "CS 1.6 Select",
+      "description": "Dropdown select with scroll and item indicators",
+      "files": [
+        { "path": "components/ui/cscn/select.tsx", "type": "registry:ui" },
+        { "path": "components/ui/cscn/styles/cstrike.css", "type": "registry:ui" }
+      ]
+    },
+    {
+      "name": "card",
+      "type": "registry:ui",
+      "title": "CS 1.6 Card",
+      "description": "VGUI panel container with header/content/footer",
+      "files": [
+        { "path": "components/ui/cscn/card.tsx", "type": "registry:ui" },
+        { "path": "components/ui/cscn/styles/cstrike.css", "type": "registry:ui" }
+      ]
+    },
+    {
+      "name": "stat-card",
+      "type": "registry:ui",
+      "title": "CS 1.6 Stat Card",
+      "description": "Stats display card with label, value, and change indicator",
+      "files": [
+        { "path": "components/ui/cscn/stat-card.tsx", "type": "registry:ui" },
+        { "path": "components/ui/cscn/styles/cstrike.css", "type": "registry:ui" }
+      ]
+    },
+    {
+      "name": "alert",
+      "type": "registry:ui",
+      "title": "CS 1.6 Alert",
+      "description": "Alert box with variant styling",
+      "files": [
+        { "path": "components/ui/cscn/alert.tsx", "type": "registry:ui" },
+        { "path": "components/ui/cscn/styles/cstrike.css", "type": "registry:ui" }
+      ]
+    },
+    {
+      "name": "dialog",
+      "type": "registry:ui",
+      "title": "CS 1.6 Dialog",
+      "description": "Modal dialog with VGUI window chrome",
+      "files": [
+        { "path": "components/ui/cscn/dialog.tsx", "type": "registry:ui" },
+        { "path": "components/ui/cscn/styles/cstrike.css", "type": "registry:ui" }
+      ]
+    },
+    {
+      "name": "tooltip",
+      "type": "registry:ui",
+      "title": "CS 1.6 Tooltip",
+      "description": "Tooltip with provider, trigger, and content",
+      "files": [
+        { "path": "components/ui/cscn/tooltip.tsx", "type": "registry:ui" },
+        { "path": "components/ui/cscn/styles/cstrike.css", "type": "registry:ui" }
+      ]
+    },
+    {
+      "name": "tabs",
+      "type": "registry:ui",
+      "title": "CS 1.6 Tabs",
+      "description": "Tab navigation with list, triggers, and content panes",
+      "files": [
+        { "path": "components/ui/cscn/tabs.tsx", "type": "registry:ui" },
+        { "path": "components/ui/cscn/styles/cstrike.css", "type": "registry:ui" }
+      ]
+    },
+    {
+      "name": "table",
+      "type": "registry:ui",
+      "title": "CS 1.6 Table",
+      "description": "Data table with VGUI-styled rows and headers",
+      "files": [
+        { "path": "components/ui/cscn/table.tsx", "type": "registry:ui" },
+        { "path": "components/ui/cscn/styles/cstrike.css", "type": "registry:ui" }
+      ]
+    },
+    {
+      "name": "avatar",
+      "type": "registry:ui",
+      "title": "CS 1.6 Avatar",
+      "description": "Player avatar with name, team color, and size variants",
+      "files": [
+        { "path": "components/ui/cscn/avatar.tsx", "type": "registry:ui" },
+        { "path": "components/ui/cscn/styles/cstrike.css", "type": "registry:ui" }
+      ]
+    },
+    {
+      "name": "badge",
+      "type": "registry:ui",
+      "title": "CS 1.6 Badge",
+      "description": "Team and status badges",
+      "files": [
+        { "path": "components/ui/cscn/badge.tsx", "type": "registry:ui" },
+        { "path": "components/ui/cscn/styles/cstrike.css", "type": "registry:ui" }
+      ]
+    },
+    {
+      "name": "separator",
+      "type": "registry:ui",
+      "title": "CS 1.6 Separator",
+      "description": "Horizontal or vertical divider line",
+      "files": [
+        { "path": "components/ui/cscn/separator.tsx", "type": "registry:ui" },
+        { "path": "components/ui/cscn/styles/cstrike.css", "type": "registry:ui" }
+      ]
+    },
+    {
+      "name": "progress-bar",
+      "type": "registry:ui",
+      "title": "CS 1.6 Progress Bar",
+      "description": "Loading/download progress indicator",
+      "files": [
+        { "path": "components/ui/cscn/progress-bar.tsx", "type": "registry:ui" },
+        { "path": "components/ui/cscn/styles/cstrike.css", "type": "registry:ui" }
+      ]
+    },
+    {
+      "name": "scoreboard",
+      "type": "registry:ui",
+      "title": "CS 1.6 Scoreboard",
+      "description": "TAB-style scoreboard with team sections",
+      "files": [
+        { "path": "components/ui/cscn/scoreboard.tsx", "type": "registry:ui" },
+        { "path": "components/ui/cscn/styles/cstrike.css", "type": "registry:ui" }
+      ]
+    },
+    {
+      "name": "buy-menu",
+      "type": "registry:ui",
+      "title": "CS 1.6 Buy Menu",
+      "description": "Full buy menu with categories and pricing",
+      "files": [
+        { "path": "components/ui/cscn/buy-menu.tsx", "type": "registry:ui" },
+        { "path": "components/ui/cscn/button.tsx", "type": "registry:ui" },
+        { "path": "components/ui/cscn/styles/cstrike.css", "type": "registry:ui" }
+      ]
+    },
+    {
+      "name": "hud",
+      "type": "registry:ui",
+      "title": "CS 1.6 HUD",
+      "description": "Health, Armor, Ammo, Money, Timer displays",
+      "files": [
+        { "path": "components/ui/cscn/hud.tsx", "type": "registry:ui" },
+        { "path": "components/ui/cscn/styles/cstrike.css", "type": "registry:ui" }
+      ]
+    },
+    {
+      "name": "kill-feed",
+      "type": "registry:ui",
+      "title": "CS 1.6 Kill Feed",
+      "description": "Top-right kill notification feed",
+      "files": [
+        { "path": "components/ui/cscn/kill-feed.tsx", "type": "registry:ui" },
+        { "path": "components/ui/cscn/styles/cstrike.css", "type": "registry:ui" }
+      ]
+    },
+    {
+      "name": "radar",
+      "type": "registry:ui",
+      "title": "CS 1.6 Radar",
+      "description": "Circular minimap with player dots",
+      "files": [
+        { "path": "components/ui/cscn/radar.tsx", "type": "registry:ui" },
+        { "path": "components/ui/cscn/styles/cstrike.css", "type": "registry:ui" }
+      ]
+    },
+    {
+      "name": "chat",
+      "type": "registry:ui",
+      "title": "CS 1.6 Chat",
+      "description": "In-game chat with team colors",
+      "files": [
+        { "path": "components/ui/cscn/chat.tsx", "type": "registry:ui" },
+        { "path": "components/ui/cscn/styles/cstrike.css", "type": "registry:ui" }
+      ]
+    },
+    {
+      "name": "console",
+      "type": "registry:ui",
+      "title": "CS 1.6 Console",
+      "description": "Interactive developer console",
+      "files": [
+        { "path": "components/ui/cscn/console.tsx", "type": "registry:ui" },
+        { "path": "components/ui/cscn/styles/cstrike.css", "type": "registry:ui" }
+      ]
+    },
+    {
+      "name": "server-browser",
+      "type": "registry:ui",
+      "title": "CS 1.6 Server Browser",
+      "description": "Server list with sorting and tabs",
+      "files": [
+        { "path": "components/ui/cscn/server-browser.tsx", "type": "registry:ui" },
+        { "path": "components/ui/cscn/button.tsx", "type": "registry:ui" },
+        { "path": "components/ui/cscn/styles/cstrike.css", "type": "registry:ui" }
+      ]
+    },
+    {
+      "name": "text-menu",
+      "type": "registry:ui",
+      "title": "CS 1.6 Text Menu",
+      "description": "Classic numbered text menu",
+      "files": [
+        { "path": "components/ui/cscn/text-menu.tsx", "type": "registry:ui" },
+        { "path": "components/ui/cscn/styles/cstrike.css", "type": "registry:ui" }
+      ]
+    },
+    {
+      "name": "team-select",
+      "type": "registry:ui",
+      "title": "CS 1.6 Team Select",
+      "description": "CT/T/Spectator team picker",
+      "files": [
+        { "path": "components/ui/cscn/team-select.tsx", "type": "registry:ui" },
+        { "path": "components/ui/cscn/button.tsx", "type": "registry:ui" },
+        { "path": "components/ui/cscn/styles/cstrike.css", "type": "registry:ui" }
+      ]
+    },
+    {
+      "name": "loading-screen",
+      "type": "registry:ui",
+      "title": "CS 1.6 Loading Screen",
+      "description": "Map loading screen",
+      "files": [
+        { "path": "components/ui/cscn/loading-screen.tsx", "type": "registry:ui" },
+        { "path": "components/ui/cscn/progress-bar.tsx", "type": "registry:ui" },
+        { "path": "components/ui/cscn/styles/cstrike.css", "type": "registry:ui" }
+      ]
+    },
+    {
+      "name": "motd",
+      "type": "registry:ui",
+      "title": "CS 1.6 MOTD",
+      "description": "Message of the Day panel",
+      "files": [
+        { "path": "components/ui/cscn/motd.tsx", "type": "registry:ui" },
+        { "path": "components/ui/cscn/button.tsx", "type": "registry:ui" },
+        { "path": "components/ui/cscn/styles/cstrike.css", "type": "registry:ui" }
+      ]
+    }
+  ]
+}

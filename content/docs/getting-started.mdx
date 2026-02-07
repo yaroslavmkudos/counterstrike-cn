@@ -18,18 +18,18 @@ Add CS 1.6 styled components to your React project. No npm package — component
 counterstrike-cn uses the [shadcn remote registry](https://ui.shadcn.com/docs/registry) protocol. If you have a shadcn-compatible project, install any component with one command:
 
 ```bash
-npx shadcn@latest add "https://counterstrike-cn.com" button
+npx shadcn@latest add https://counterstrike-cn.com/r/button.json
 ```
 
-Replace `button` with any component name. Install multiple at once:
+Install multiple components at once:
 
 ```bash
-npx shadcn@latest add "https://counterstrike-cn.com" button input card dialog badge
+npx shadcn@latest add https://counterstrike-cn.com/r/button.json https://counterstrike-cn.com/r/card.json https://counterstrike-cn.com/r/dialog.json
 ```
 
 The CLI will:
 1. Fetch the component source from the registry
-2. Copy the `.tsx` file into your project's components directory
+2. Copy the `.tsx` file into your project's `components/ui/cscn/` directory
 3. Include `cstrike.css` (the shared stylesheet for all components)
 
 ## Manual Install

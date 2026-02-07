@@ -20,7 +20,13 @@ Counter-Strike 1.6 inspired UI components for React. Copy, paste, customize.
 ### CLI (recommended)
 
 ```bash
-npx shadcn@latest add "https://counterstrike-cn.com" button
+npx shadcn@latest add https://counterstrike-cn.com/r/button.json
+```
+
+Install multiple components:
+
+```bash
+npx shadcn@latest add https://counterstrike-cn.com/r/button.json https://counterstrike-cn.com/r/card.json https://counterstrike-cn.com/r/dialog.json
 ```
 
 This uses shadcn's remote registry protocol. No npm package needed — the CLI fetches the component source and copies it into your project.
